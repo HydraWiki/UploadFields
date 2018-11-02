@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<ruleset>
+	<rule ref="./vendor/hydrawiki/hydrawiki-codesniffer/HydraWiki"/>
+	<rule ref="Generic.Files.LineLength">
+		<properties>
+			<property name="lineLimit" value="120"/>
+			<property name="absoluteLineLimit" value="0"/>
+		</properties>
+	</rule>
+	<file>.</file>
+    <arg name="extensions" value="php,php5,inc"/>
+	<arg name="encoding" value="UTF-8"/>
+	<exclude-pattern type="relative">^vendor/</exclude-pattern>
+</ruleset>

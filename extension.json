@@ -1,0 +1,29 @@
+{
+	"name": "Upload Fields",
+	"version": "0.0.2",
+	"author": [
+		"Alexia E. Smith",
+		"Hydra Wiki Platform Team"
+	],
+	"descriptionmsg": "uploadfields_description",
+	"type": "specialpage",
+	"license-name": "GPL-2.0-or-later",
+	"MessagesDirs": {
+		"UploadFields": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"UploadFields\\UploadField": "classes/UploadField.php",
+		"UploadFields\\Hooks": "classes/Hooks.php"
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "UploadFields"
+	},
+	"Hooks": {
+		"SpecialUploadComplete": "UploadFields\\Hooks::onSpecialUploadComplete",
+		"UploadFormInitDescriptor": "UploadFields\\Hooks::onUploadFormInitDescriptor"
+	},
+	"manifest_version": 1
+}

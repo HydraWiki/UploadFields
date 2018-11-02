@@ -1,0 +1,7 @@
+{
+	"@metadata": {
+		"authors": ["Alexia E. Smith"]
+	},
+	"uploadfields": "Upload Fields",
+	"uploadfields_description": "Add custom fields to [[Special:Upload]] to be automatically added to the <nowiki>{{FileInfo}}</nowiki> template on the file pages."
+}
