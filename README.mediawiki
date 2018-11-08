@@ -1,8 +1,9 @@
 {{TNT|Extension
 |name        = UploadFields
-|license     = All Rights Reserved
+|license     = GPL-2.0-or-later
 |status      = stable
-|type        = upload
+|type1       = interface
+|type2       = media
 |author      = Alexia E. Smith ([[User:Alexia E. Smith|Alexia E. Smith]])
 |version     = 0.0.3
 |update      = 2018-11-08
@@ -19,22 +20,19 @@ The '''UploadFields''' Extension is a MediaWiki extension which allows the confi
 ;Project Homepage: [https://github.com/HydraWiki/UploadFields Documentation at Github]
 ;Source Code: [https://github.com/HydraWiki/UploadFields Source code at Github]
 ;Bugs:[https://github.com/HydraWiki/UploadFields/issues issues at Github]
-;Licensing: UploadFields is All Rights Reserved, Copyright 2017 Curse, Twitch, Amazon
+;Licensing: UploadFields is GPL-2.0+ Copyright 2017 Curse
 
 
-==Installation==
+== Installation ==
 
-1. Download the contents of the extension, as outlined above.
-2. Create an UploadFields folder in the extensions/ folder of your MediaWiki installation.
-3. Copy the contents of this distribution into that folder
+{{TNT|ExtensionInstall
+|UploadFields
+|download-link=[https://github.com/HydraWiki/UploadFields/archive/v0.0.3.zip Download, extract]
+|custom-steps=* [[#Configuration|If necessary configure as required.]]
+|registration=required
+}}
 
-Add the following line to your LocalSettings.php:
-
-<syntaxhighlight lang="php">
-wfLoadExtension("UploadFields");
-</syntaxhighlight>
-
-==Usage==
+== Usage ==
 
 To create a new upload field start by creating a new page in the MediaWiki namespace.
 
@@ -49,21 +47,21 @@ Valid types are:
 
 If you wanted a drop down HTML select field named "Game" you would create the definition page: <code>[[MediaWiki:UploadField-select-Game]]</code>
 
-==Field Types==
+== Field Types ==
 
-===select and multiselect===
+=== select and multiselect ===
 
 These two types support two levels deep of listed options which is limited due to HTML specifications.  Simply make a standard unordered list up to ** deep.  Any blank lines and lines not starting with * with be ignored.
 
 Each selection value should be in the format of: TemplateValue|Label Name
 
 <pre><nowiki>
-*Main Series
-**Part1|This Amazing Game Part 1
-**Part2|This Amazing Game Part 2
+* Main Series
+** Part1|This Amazing Game Part 1
+** Part2|This Amazing Game Part 2
 
-*Combinations
-**CE|Collector's Edition
+* Combinations
+** CE|Collector's Edition
 </nowiki></pre>
 
 Example: Selecting "This Amazing Game Part 1" from the "Game" field when uploading a new image would result in "Game=Part1" being added to the FileInfo template.
@@ -74,10 +72,10 @@ Example: Selecting "This Amazing Game Part 1" from the "Game" field when uploadi
 }}
 </nowiki></pre>
 
-===text and textarea===
+=== text and textarea ===
 
 The text and textarea types add their respective single line or multiple line text fields to the upload form.  The content of the MediaWiki:UploadField-text(area)-Name definition page will be filled in as a default value and can be left blank.
 
-===category===
+=== category ===
 
 The category type produces a multiple select check box list of existing wiki categories to choose from.  There is no filtering and any content added to the MediaWiki:UploadField-category-Name definition page will be ignored.
