@@ -13,11 +13,12 @@
 **/
 namespace UploadFields;
 
-use HTMLForm;
-use Revision;
-use WikiPage;
 use ContentHandler;
+use HTMLForm;
 use RequestContext;
+use Revision;
+use SpecialUpload;
+use WikiPage;
 
 class Hooks {
 	/**

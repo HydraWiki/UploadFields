@@ -4,9 +4,9 @@
 |status      = stable
 |type        = upload
 |author      = Alexia E. Smith ([[User:Alexia E. Smith|Alexia E. Smith]])
-|version     = 0.0.2
-|update      = 2017-03-16
-|mediawiki   = 1.27+
+|version     = 0.0.3
+|update      = 2018-11-08
+|mediawiki   = 1.30+
 |php         = 7.0+
 |download    = {{TNT|GithubDownload|HydraWiki|UploadFields}}
 |hook1       = onUploadFormInitDescriptor
